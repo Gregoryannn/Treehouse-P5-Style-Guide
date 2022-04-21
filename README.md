@@ -1,1 +1,1 @@
-# -Treehouse-P5-Style-Guide
+# Treehouse-P5-Style-Guide
