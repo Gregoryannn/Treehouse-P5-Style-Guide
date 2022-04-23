@@ -2,12 +2,8 @@
     background: $white;
     margin: 0 auto;
     padding: 0 em(20px);
-}
-
-.centered {
-    @media (min-width: $break-md) {
-        align-self: center;
-        width: inherit;
+    @media (min-width: $break-lg) {
+        width: 80%;
     }
 }
 
@@ -16,15 +12,26 @@
     margin: em(10px) auto em($base__line);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    &:first-of-type {
+        align-items: center;
+    }
     >[class^='grid__col--'] {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        @media (min-width: $break-md) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
     @media (min-width: $break-md) {
         flex-direction: row;
     }
+}
+
+[class^='grid__col--'] {
+    width: 100%;
 }
 
 .grid__col {
@@ -33,6 +40,7 @@
     $color in $grid-colors {
         &--#{$col}.theme__colors {
             @extend %rounded;
+            text-align: center;
             background: $color;
         }
     }
@@ -55,11 +63,14 @@
     display: flex;
     margin-top: em(12px);
     margin-bottom: em(12px);
-    width: 100%;
     @media (min-width: $break-md) {
         @include double-amp(percentage( $grid-gutter-width / $context));
         min-height: 1px;
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+.centered {
+    margin: 0 auto;
 }
