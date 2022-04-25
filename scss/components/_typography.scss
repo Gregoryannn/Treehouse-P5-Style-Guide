@@ -7,13 +7,13 @@
     font-weight: 400;
     font-style: normal;
 
-    > .headline--secondary {
-        margin-left: em(26px, 20px);
+> .headline--secondary {
+    margin-left: em(26px, 20px);
 
-        @media (min-width: $break-md) {
-            margin-left: em(50px, 20px);
-        }
+@include mq(med) {
+     margin-left: em(50px, 20px);
     }
+  }
 }
 
 .headline {
@@ -27,13 +27,13 @@
         margin-left: 5%;
     }
 
-    &--secondary {
+&--secondary {
         // font-size 20px
-        font-size: em($base__font-size + 2px);
-        font-weight: 300;
-        line-height: 1.2;
-        margin: em(40px, 20px) 0 em(28px, 20px);
-    }
+       font-size: em($base__font-size + 2px);
+       font-weight: 300;
+       line-height: 1.2;
+       margin: em(40px, 20px) 0 em(28px, 20px);
+   }
 }
 
 .link {

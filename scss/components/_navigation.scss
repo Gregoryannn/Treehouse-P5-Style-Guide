@@ -5,13 +5,13 @@
     padding: 0;
     margin: 0 0 em(80px);
 
-    @media (min-width: $break-md) {
+    @include mq(med) {
         flex-direction: row;
         margin-bottom: 0;
     }
 
     &__item {
-        @media (min-width: $break-lg) {
+        @include mq(large) {
             margin: 0 15px;
         }
 
@@ -27,14 +27,13 @@
                 font-size: em(20px);
                 padding: em(20px);
                 border-radius: em(10px);
-
                 transition: color 0.3s, background-color 0.3s;
 
-                @media (min-width: $break-md) {
+                @include mq(med) {
                     padding: em(7px) em(20px);
                 }
 
-                @media (min-width: $break-lg) {
+                @include mq(large) {
                     padding: em(3px) em(20px);
                 }
             }
